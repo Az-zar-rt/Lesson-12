@@ -1,0 +1,237 @@
+//static void Main(string[] args)
+//{
+//    // Create a myCar object
+//    Car myCar = new Car();
+//    // Call the honk() method (From the Vehicle class) on the myCar object
+//    myCar.honk();
+//    // Display the value of the brand field (from the Vehicle class) and the value of the modelName from the Car class
+//    Console.WriteLine(myCar.brand + " " + myCar.modelName);
+//}
+//class Vehicle  // base class (parent) 
+//{
+//    public string brand = "Ford";  // Vehicle field
+//    public void honk()             // Vehicle method 
+//    {
+//        Console.WriteLine("Tuut, tuut!");
+//    }
+//}
+//class Car : Vehicle  // derived class (child)
+//{
+//    public string modelName = "Mustang";  // Car field
+//}
+
+//Animal myAnimal = new Animal();  // Create a Animal object
+//Animal myPig = new Pig();  // Create a Pig object
+//Animal myDog = new Dog();  // Create a Dog object
+
+//myAnimal.animalSound();
+//myPig.animalSound();
+//myDog.animalSound();
+
+//class Animal  // Base class (parent) 
+//{
+//    public void animalSound()
+//    {
+//        Console.WriteLine("The animal makes a sound");
+//    }
+//}
+
+//class Pig : Animal  // Derived class (child) 
+//{
+//    public void animalSound()
+//    {
+//        Console.WriteLine("The pig says: wee wee");
+//    }
+//}
+
+//class Dog : Animal  // Derived class (child) 
+//{
+//    public void animalSound()
+//    {
+//        Console.WriteLine("The dog says: bow wow");
+//    }
+//}
+//class Animal  // Base class (parent) 
+//{
+//    public virtual void animalSound()
+//    {
+//        Console.WriteLine("The animal makes a sound");
+//    }
+//}
+
+//class Pig : Animal  // Derived class (child) 
+//{
+//    public override void animalSound()
+//    {
+//        Console.WriteLine("The pig says: wee wee");
+//    }
+//}
+
+//class Dog : Animal  // Derived class (child) 
+//{
+//    public override void animalSound()
+//    {
+//        Console.WriteLine("The dog says: bow wow");
+//    }
+//}
+//Person person = new Person { Name = "Tom" };
+//person.Print();   // Tom
+//person = new Employee { Name = "Sam" };
+//person.Print();   // Sam
+//class Person
+//{
+//    private string _name = "";
+//    public string Name
+//    {
+//        get { return _name; }
+//        set { _name = value; }
+//    }
+//    public void Print()
+//    {
+//        Console.WriteLine(Name);
+//    }
+//}
+//class Employee : Person
+//{
+
+//}
+//Person1 person = new Person1("Bob");
+//person.Print();     // Bob
+//Employee1 employee = new Employee1("Tom", "Microsoft");
+//employee.Print();   // Tom
+//class Person1
+//{
+//    public string Name { get; set; }
+//    public Person1(string name)
+//    {
+//        Name = name;
+//    }
+//    public void Print()
+//    {
+//        Console.WriteLine(Name);
+//    }
+//}
+//class Employee1 : Person1
+//{
+//    public string Company { get; set; }
+//    public Employee1(string name, string company)
+//        : base(name)
+//    {
+//        Company = company;
+//    }
+//}
+//Employee tom = new Employee("Tom", 22, "Microsoft");
+//class Person
+//{
+//    string name;
+//    int age;
+//    public Person(string name)
+//    {
+//        this.name = name;
+//        Console.WriteLine("Person(string name)");
+//    }
+//    public Person(string name, int age) : this(name)
+//    {
+//        this.age = age;
+//        Console.WriteLine("Person(string name, int age)");
+//    }
+//}
+//class Employee : Person
+//{
+//    string company;
+//    public Employee(string name, int age, string company) : base(name, age)
+//    {
+//        this.company = company;
+//        Console.WriteLine("Employee(string name, int age, string company)");
+//    }
+//}
+
+
+//Object
+//ToString(), Equals(), GetHashCode(), GetType()
+
+//Person bob = new Person("Bob");
+//bob.Print();    // Name: Bob
+//Employee tom = new Employee("Tom", "Microsoft");
+//tom.Print();
+//class Person
+//{
+//    public string Name { get; set; }
+//    public Person(string name)
+//    {
+//        Name = name;
+//    }
+//    public void Print()
+//    {
+//        Console.WriteLine($"Name: {Name}");
+//    }
+//}
+//class Employee : Person
+//{
+//    public string Company { get; set; }
+//    public Employee(string name, string company)
+//                : base(name)
+//    {
+//        Company = company;
+//    }
+//    public new void Print()
+//    {
+//        Console.WriteLine($"Name: {Name}   Company: {Company}");
+//    }
+//}
+
+//Person tom = new Employee("Tom", "Microsoft");
+//tom.Print();
+//class Person
+//{
+//    public string Name { get; set; }
+//    public Person(string name)
+//    {
+//        Name = name;
+//    }
+//    public virtual void Print()
+//    {
+//        Console.WriteLine(Name);
+//    }
+//}
+//class Employee : Person
+//{
+//    public string Company { get; set; }
+//    public Employee(string name, string company)
+//        : base(name)
+//    {
+//        Company = company;
+//    }
+//    public override void Print()
+//    {
+//        Console.WriteLine($"{Name} работает в {Company}");
+//    }
+//}
+
+//Person tom = new Employee("Tom", "Microsoft");
+//tom.Print();
+//class Person
+//{
+//    public string Name { get; set; }
+//    public Person(string name)
+//    {
+//        Name = name;
+//    }
+//    public void Print()
+//    {
+//        Console.WriteLine(Name);
+//    }
+//}
+//class Employee : Person
+//{
+//    public string Company { get; set; }
+//    public Employee(string name, string company)
+//            : base(name)
+//    {
+//        Company = company;
+//    }
+//    public new void Print()
+//    {
+//        Console.WriteLine($"{Name} работает в {Company}");
+//    }
+//}
