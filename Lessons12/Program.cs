@@ -8,7 +8,7 @@
         
       
             Console.WriteLine("What list you wont? '1'-Cars '2'-Engines '3'-Model");
-            int i = Convert.ToInt32(Console.ReadLine());
+            int i = Convert.ToInt32(Console.ReadLine());//what will happened if user will input the character? It would be better to use try catch for some unexpected cases
             if (i == 1)
             {
             cars.CarList();
@@ -65,3 +65,4 @@
         }
     }
 }
+//checked
